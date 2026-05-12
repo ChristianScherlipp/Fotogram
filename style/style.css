@@ -1,0 +1,85 @@
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+
+.gl-header {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: rgba(9, 33, 42, 1);
+
+}
+
+.head-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.25rem 0rem;
+
+}
+
+#headFlowerIcon {
+    width: 2.5rem;
+}
+
+#headText {
+    width: 10.375rem;
+    height: 2.125rem;
+    margin-top: 0.7rem;
+}
+
+body {
+    background-color: rgba(6, 23, 30, 1);
+}
+
+.gl-main {
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+.gl-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(9, 33, 42, 1);
+    border-top-left-radius: 40% 25%;
+    border-top-right-radius:40% 25%;
+}
+
+.footer-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.footer-images > p {
+    font-size: 0.875rem;
+    color: rgba(153, 172, 179, 1);
+}
+
+#logoDA {
+    width: 2.375rem;
+}
+
+#textDA {
+    width: 5.375rem;
+}
