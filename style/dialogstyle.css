@@ -1,0 +1,78 @@
+
+
+.content-dialog {
+    width: 42.5rem;
+    height: 42.5rem;
+    background-image: linear-gradient(to bottom right, rgb(0, 13, 56), rgb(141, 2, 255));
+    border-radius: 10%;
+    border: none;
+
+}
+
+.content-dialog:open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform:translate(90%, 20%);
+}
+
+.content-dialog > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+
+    color: white;
+}
+
+.content-dialog > header > img {
+    width: 3rem;
+}
+
+.content-dialog > footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+
+    color: white;
+}
+
+.dialogMainContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialogMainContent > img{
+    height: 18.75rem;
+}
+
+#switchleft{
+    transform: rotate(-90deg);
+}
+
+#switchRight {
+    transform: rotate(90deg);
+}
+
+.switch {
+    z-index: 1;
+    width: 2rem;
+    
+}
+
+.switch-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 4rem;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    background-color: rgba(255, 0, 0, 0.404);
+    cursor: pointer;
+}
+
+.switch-bg:hover {
+    background-color: rgba(255, 0, 0, 0.658);
+}

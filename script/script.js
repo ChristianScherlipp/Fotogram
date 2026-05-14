@@ -1,6 +1,6 @@
 let dogPicture = document.getElementById('content-dogGallery');
 let dialogDogPicture = document.getElementById('dialogPicture');
-
+let dialogTitle = document.getElementById('pictureTitle');
 
 const dogGallery = ["Abby_Baden_ist_das_größte.jpeg",
                     "Abby_Das_riecht_aber_gut.jpeg",
@@ -21,7 +21,7 @@ const dialogRef = document.getElementById('dialogGallery');
 
 function renderDogGallery() {
     for (let i = 0; i < dogGallery.length; i++) {
-    dogPicture.innerHTML  += `<img id="dogGallery-Picture${i}" class="pictureDog" onclick="openDialog(${i})" src="./assets/img/gallery/${dogGallery[i]}" alt="">`;
+    dogPicture.innerHTML  += `<img id="dogGallery-Picture${i}" class="pictureDog" onclick="openDialog(${i})" src="./assets/img/gallery/${dogGallery[i]}" alt="${dogGallery[i]}">`;
 
     }    
 }
@@ -29,7 +29,8 @@ function renderDogGallery() {
 
 function openDialog(i) {
     dialogRef.showModal();
-    dialogDogPicture.innerHTML = `<img  src="./assets/img/gallery/${dogGallery[i]}" alt="">`;
+    dialogDogPicture.innerHTML = `<img  src="./assets/img/gallery/${dogGallery[i]}" alt="${dogGallery[i]}">`;
+    dialogTitle.innerHTML = `${dogGallery[i]}`;
 }
 
 

@@ -5,8 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Fotogram</title>
         <link rel="stylesheet" href="./style/style.css" />
+        <link rel="stylesheet" href="./style/dialogstyle.css">
         <link rel="stylesheet" href="./style/breakmax.css">
         <link rel="stylesheet" href="./style/breakmax480.css">
+        <link rel="shortcut icon" href="./assets/icons/Group.svg" type="image/x-icon">
     </head>
     <body onload="renderDogGallery()">
         <header class="gl-header">
@@ -22,17 +24,20 @@
                 </section>
                 <dialog id="dialogGallery" class="content-dialog">
                     <header>
-                        <h2>Titel</h2>
-                        <button onclick="closeDialog()">Schlißen</button>
+                        <h2 id="pictureTitle">Titel</h2>
+                        <img id="switchleft" class="switch" onclick="closeDialog()" src="./assets/icons/file.svg" alt="">
                     </header>
                     <main id="dialogPicture" class="dialogMainContent">
                     </main>
                     <footer>
-                        <img id="switchleft" class="switch" onclick="" src="./assets/icons/pfote.png" alt="">
+                        <div class="switch-bg">
+                            <img id="switchleft" class="switch" onclick="" src="./assets/icons/pfote.png" alt="">
+                        </div>
                         <p>1-12</p>
-                       <img id="switchRight" class="switch" onclick="" src="./assets/icons/pfote.png" alt="">
+                        <div class="switch-bg">
+                            <img id="switchRight" class="switch" onclick="" src="./assets/icons/pfote.png" alt="">
+                        </div>
                     </footer>
-                   
                 </dialog>
             </section>
 

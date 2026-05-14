@@ -83,54 +83,6 @@ h1 {
     border-radius: 20%;
 }
 
-.content-dialog {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
-
-    width: 42.5rem;
-    height: 42.5rem;
-    background-image: linear-gradient(to bottom right, rgb(0, 13, 56), rgb(141, 2, 255));
-    border-radius: 10%;
-    border: none ;
-
-}
-
-.content-dialog > header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.75rem;
-}
-
-.content-dialog > footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.25rem  15.125rem;
-}
-
-.dialogMainContent{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.dialogMainContent > img{
-    height: 18.75rem;
-}
-
-#switchleft{
-    transform: rotate(-90deg);
-}
-
-#switchRight {
-    transform: rotate(90deg);
-}
-
-.switch {
-    width: 2rem;
-}
-
-
 
 
 .gl-footer {
@@ -147,6 +99,7 @@ h1 {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+    
 }
 
 .footer-images{
