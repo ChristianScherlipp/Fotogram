@@ -76,7 +76,7 @@ h1 {
 
 }
 
-.pictureDog {
+.pictureDog > img{
     width: 9.375rem;
     height: 9.375rem;
 
@@ -84,6 +84,18 @@ h1 {
     border-radius: 20%;
 
     cursor: pointer;
+
+}
+
+.pictureDog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9.375rem;
+    height: 9.375rem;
+    background-color: transparent;
+    border-radius: 20%;
+    border: transparent;
 }
 
 

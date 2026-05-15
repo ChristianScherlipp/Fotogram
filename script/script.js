@@ -1,7 +1,7 @@
     let dogPicture = document.getElementById('content-dogGallery'); // Variable mit zugriff auf den Content der Hauptseite 
     let dialogDogPicture = document.getElementById('dialogPicture'); // Variable mit zugriff auf den main content des dialog
     let dialogTitle = document.getElementById('pictureTitle'); // Variable mit zugriff auf den Titel des Dialog
-
+    
     const dogGallery = ["Abby_Baden_ist_das_größte.jpeg",
                         "Abby_Das_riecht_aber_gut.jpeg",
                         "Abby_Lange_Auto_fahrten_machen_müde.jpeg",
@@ -21,7 +21,7 @@
     // Funktion zumm generieren der bilder im main der Hauptseite mit id, class und onclick funktion im main bereich des dialog 
     function renderDogGallery() {
         for (let i = 0; i < dogGallery.length; i++) {
-        dogPicture.innerHTML  += `<img id="dogGallery-Picture${i}" class="pictureDog" onclick="openDialog(${i})" tabindex = "0" src="./assets/img/gallery/${dogGallery[i]}" alt="${dogGallery[i]}">`;
+        dogPicture.innerHTML  += `<button class="pictureDog" onclick="openDialog(${i})"><img id="dogGallery-Picture${i}" src="./assets/img/gallery/${dogGallery[i]}" alt="${dogGallery[i]}"></button`;
         
         }    
     }
@@ -38,6 +38,8 @@
     function closeDialog() {
         dialogRef.close(); 
     }
+
+
 
 
 
