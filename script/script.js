@@ -29,9 +29,9 @@
     // Dialog öffnen durch anklicken der bilder, Funktion zumm generieren der bilder im main des dialog sowie des titels
     function openDialog(i) {
         dialogRef.showModal();
-        dialogDogPicture.innerHTML = `<img  src="./assets/img/gallery/${dogGallery[i]}" alt="${dogGallery[i]}">`;
         dialogTitle.innerHTML = `${dogGallery[i]}`; // generiert den Titel aus der Liste
-        dialogTitle.innerText = dogGallery[i].replaceAll("_", " ") .replaceAll(".jpeg", ""); // Sorgt dafür das der unterstrich und das .jpeg ersetzt werde 
+        dialogTitle.innerText = dogGallery[i].replaceAll("_", " ") .replaceAll(".jpeg", ""); // Sorgt dafür das der unterstrich und das .jpeg ersetzt werde
+        dialogDogPicture.innerHTML = `<img  src="./assets/img/gallery/${dogGallery[i]}" alt="${dogGallery[i]}">`;
     }
 
     //  Schließt den dialog
