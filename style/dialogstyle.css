@@ -3,7 +3,7 @@
 .content-dialog {
     width: 42.5rem;
     height: 42.5rem;
-    background-image: linear-gradient(to bottom right, rgb(0, 13, 56), rgb(141, 2, 255));
+    background-image: linear-gradient(to bottom left, rgb(0, 13, 56), rgb(141, 2, 255));
     border-radius: 10%;
     border: none        ;
     position: fixed;
