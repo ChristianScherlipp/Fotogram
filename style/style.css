@@ -52,6 +52,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items:center;
+    position: relative;
 }
 
 .content-headlineOne {
@@ -81,6 +82,8 @@ h1 {
 
     border: 0.125rem solid blue;
     border-radius: 20%;
+
+    cursor: pointer;
 }
 
 

@@ -5,7 +5,11 @@
     height: 42.5rem;
     background-image: linear-gradient(to bottom right, rgb(0, 13, 56), rgb(141, 2, 255));
     border-radius: 10%;
-    border: none;
+    border: none        ;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
 }
 
@@ -13,7 +17,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transform:translate(90%, 20%);
+    
 }
 
 .content-dialog > header {
@@ -23,6 +27,28 @@
     padding: 0.75rem;
 
     color: white;
+}
+
+.content-dialog > header > button {
+    background-color: transparent;
+    width: 3rem;
+}
+
+.closeDialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: transparent;
+    border-radius: 50%;
+    width: 20px;
+    padding: 0px;
+
+}
+
+#closed {
+    width: 100%;   
 }
 
 .content-dialog > header > img {
@@ -71,6 +97,7 @@
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
     background-color: rgba(255, 0, 0, 0.404);
     cursor: pointer;
+    border: transparent;
 }
 
 .switch-bg:hover {
