@@ -20,6 +20,10 @@
     
 }
 
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .content-dialog > header {
     display: flex;
     justify-content: space-between;
@@ -72,6 +76,10 @@
 
 .dialogMainContent > img{
     height: 18.75rem;
+}
+
+.dialogFooter > p{
+    width: 3rem;
 }
 
 #switchleft{
