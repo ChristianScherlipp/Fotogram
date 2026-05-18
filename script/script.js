@@ -39,7 +39,7 @@
         dialogRef.close(); 
     }
 
-    // Change Picture with open dialog
+    // Render  Picture with open dialog
     function renderDialogImage() {
 
     dialogTitle.innerText = dogGallery[currentImage].replaceAll("_", " ") .replaceAll(".jpeg", "");
@@ -47,21 +47,22 @@
     dialogDogPicture.innerHTML = `<img src="./assets/img/gallery/${dogGallery[currentImage]}" alt="${dogGallery[currentImage]}">`;
     }
     
-
+    //  Change Picture with open Dialog
     function changePicture(step) {
         currentImage += step;
 
-            if (currentImage >= dogGallery.length) {
-                currentImage = 0;
+        document.getElementById('imageCounter').innerHTML =`${currentImage + 1} / ${dogGallery.length}`; // änder das <p> tag und gib die zahlwerte aus erste zahl wechselt zweite ist fest
+
+            if (currentImage >= dogGallery.length) { // Prüfe ob die Tasten eingabe größer ist als die Liste wenn wahr da gehe zum start der liste  
+                currentImage = 0; 
             }
             
         
-            if (currentImage < 0) {
+            if (currentImage < 0) { // Prüfe ob die Tasten eingabe kleiner ist als die Liste wenn wahr da gehe zum Ende der liste  
                 currentImage = dogGallery.length - 1; 
             }
-        
-
-        renderDialogImage();
+            
+            renderDialogImage();
             
     }
 
