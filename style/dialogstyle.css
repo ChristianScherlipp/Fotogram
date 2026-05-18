@@ -78,6 +78,7 @@ dialog::backdrop {
 
 .dialogMainContent > img{
     height: 18.75rem;
+    padding: 0rem 1rem;
 }
 
 .dialogFooter > p{
