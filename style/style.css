@@ -7,10 +7,11 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     background-image: linear-gradient(to bottom right, rgb(0, 13, 56), rgb(141, 2, 255));
+    background-repeat: no-repeat;
     
 }
 

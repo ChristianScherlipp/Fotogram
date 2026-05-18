@@ -13,12 +13,6 @@ h1 {
     font-size: 2.5rem;
 }
 
-.content-dialog{
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-}
-
 .dialogMainContent > img{
     width: 18.25rem;
 }
