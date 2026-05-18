@@ -79,6 +79,15 @@ h1 {
 
 }
 
+#content-dogGallery:has(img:hover) img:not(:hover) {
+    opacity: 0.35;
+}
+
+/* Second row offset: NBBBBBN */
+#content-dogGallery img:nth-child(8) {
+    grid-column-start: 2;
+}
+
 .pictureDog > img{
     width: 9.375rem;
     height: 9.375rem;
