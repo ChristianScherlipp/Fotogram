@@ -121,7 +121,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10rem;
     
     background-image: url(../assets/img/bg_footer.png);
     background-size: cover;
