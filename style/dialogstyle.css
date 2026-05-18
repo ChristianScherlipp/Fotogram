@@ -18,10 +18,11 @@
     flex-direction: column;
     justify-content: space-between;
     
+    
 }
 
 dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.35);
 }
 
 .content-dialog > header {
