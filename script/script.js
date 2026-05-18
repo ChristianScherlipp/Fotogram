@@ -39,6 +39,7 @@
         dialogRef.close(); 
     }
 
+    // Change Picture with open dialog
     function renderDialogImage() {
 
     dialogTitle.innerText = dogGallery[currentImage].replaceAll("_", " ") .replaceAll(".jpeg", "");
