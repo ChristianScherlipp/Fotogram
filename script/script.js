@@ -52,8 +52,7 @@
     function changePicture(step) {
         currentImage += step;
 
-        document.getElementById('imageCounter').innerHTML =`${currentImage + 1} / ${dogGallery.length}`; // änder das <p> tag und gib die zahlwerte aus erste zahl wechselt zweite ist fest
-
+        
             if (currentImage >= dogGallery.length) { // Prüfe ob die Tasten eingabe größer ist als die Liste wenn wahr da gehe zum start der liste  
                 currentImage = 0; 
             }
@@ -62,6 +61,9 @@
             if (currentImage < 0) { // Prüfe ob die Tasten eingabe kleiner ist als die Liste wenn wahr da gehe zum Ende der liste  
                 currentImage = dogGallery.length - 1; 
             }
+
+            document.getElementById('imageCounter').innerHTML =`${currentImage + 1} / ${dogGallery.length}`; // änder das <p> tag und gib die zahlwerte aus erste zahl wechselt zweite ist fest
+
             
             renderDialogImage();
             
