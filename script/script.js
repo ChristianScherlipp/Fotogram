@@ -32,6 +32,7 @@
         currentImage = i;
         dialogRef.showModal();
         renderDialogImage();
+        document.getElementById('imageCounter').innerHTML =`${currentImage + 1} / ${dogGallery.length}`; // änder das <p> tag und gib die zahlwerte aus erste zahl wechselt zweite ist fest
     }
 
     //  Schließt den dialog
