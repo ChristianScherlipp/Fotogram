@@ -63,7 +63,7 @@ h1 {
     font-size: 3.5rem;
     color: rgba(255, 255, 255, 1);
     padding-bottom: 5rem;
-    font-family: 'Alex Brush';
+    font-family: 'Figtree';
 }
 
 
@@ -143,6 +143,7 @@ h1 {
 .footer-section > p {
     font-size: 0.875rem;
     color: rgba(153, 172, 179, 1);
+    font-family: 'Figtree';
 }
 
 #logoDA {
