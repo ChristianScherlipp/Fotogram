@@ -39,6 +39,7 @@ dialog::backdrop {
     width: 3rem;
 }
 
+
 .closeDialog {
     display: flex;
     justify-content: center;
@@ -49,7 +50,7 @@ dialog::backdrop {
     border-radius: 50%;
     width: 20px;
     padding: 0px;
-
+    filter:brightness(0)invert(1);
 }
 
 #closed {
