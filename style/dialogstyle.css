@@ -71,6 +71,7 @@ dialog::backdrop {
 }
 
 .dialogMainContent{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,6 +80,7 @@ dialog::backdrop {
 .dialogMainContent > img{
     height: 18.75rem;
     padding: 0rem 1rem;
+
 }
 
 .dialogFooter > p{
