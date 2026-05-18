@@ -8,7 +8,7 @@
                         "Abby_Lange_Auto_fahrten_machen_müde.jpeg",
                         "Abby_spielen_in_der_freien_Natur.jpeg",
                         "Kira_erster_Tag_im_neuen_zu_Hause.jpeg",
-                        "Kira_Es_gibt_Nach_wuchs.jpeg",
+                        "Kira_Es_gibt_Nachwuchs.jpeg",
                         "Kira_Im_Arm_schläft_sich_am_besten_.jpeg",
                         "Kira_My_best_buddy_Sunny.jpeg",
                         "Sunny_ein_gechillter_Tag.jpeg",
