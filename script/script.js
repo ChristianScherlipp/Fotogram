@@ -33,12 +33,15 @@ function openDialog(i) {
     currentImage = i;
     dialogRef.showModal();
     renderDialogImage();
-    counter.innerHTML =`${currentImage + 1} / ${dogGallery.length}`; // änder das <p> tag und gib die zahlwerte aus erste zahl wechselt zweite ist fest
+    counter.innerHTML =`${currentImage + 1} / ${dogGallery.length}`; // Modify the <p> tag and output the numeric values; the first number changes, while the second remains fixed.
 }
 //  Closes the dialog.
 function closeDialog() {
-    stopSlideshow(); // <-- Wichtig: Diashow stoppen beim Schließen
     dialogRef.close();
+    
+    dialogRef.addEventListener("close", () => {
+    stopSlideshow();  // <--Important: Stop slideshow upon closing.
+    });
 }
 
 // Render Picture
@@ -69,17 +72,17 @@ function changePicture(step) {
     renderDialogImage();
 }
 
-// Startet die automatische Diashow (Wechsel alle 3 Sekunden)
+// Starts the automatic slideshow (changes every 2 seconds)
 function startSlideshow() {
-    // Verhindert doppelte Timer, falls man mehrfach klickt
+    // Prevents duplicate timers in case of multiple clicks.
     if (slideshowTimer === null) {
         slideshowTimer = setInterval(() => {
-            changePicture(1); // Nutzt Ihre vorhandene Funktion für das nächste Bild
-        }, 2000); // 2000 Millisekunden = 2 Sekunden
+            changePicture(1); // Uses your existing function for the next image.
+        }, 2000); // 2000 milliseconds = 2 seconds
     }
 }
 
-// Stoppt die Diashow
+// Stop the slideshow
 function stopSlideshow() {
     if (slideshowTimer !== null) {
         clearInterval(slideshowTimer);
