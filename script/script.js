@@ -1,6 +1,6 @@
-let dogPicture = document.getElementById("content-dogGallery"); // Variable mit zugriff auf den Content der Hauptseite
-let dialogDogPicture = document.getElementById("dialogPicture"); // Variable mit zugriff auf den main content des dialog
-let dialogTitle = document.getElementById("pictureTitle"); // Variable mit zugriff auf den Titel des Dialog
+const dogPicture = document.getElementById("content-dogGallery"); // Variable mit zugriff auf den Content der Hauptseite
+const dialogDogPicture = document.getElementById("dialogPicture"); // Variable mit zugriff auf den main content des dialog
+const dialogTitle = document.getElementById("pictureTitle"); // Variable mit zugriff auf den Titel des Dialog
 let currentImage = 0;
 
 const dogGallery = [
