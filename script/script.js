@@ -1,8 +1,10 @@
-const dogPicture = document.getElementById("content-dogGallery"); // Variable mit zugriff auf den Content der Hauptseite
-const dialogDogPicture = document.getElementById("dialogPicture"); // Variable mit zugriff auf den main content des dialog
-const dialogTitle = document.getElementById("pictureTitle"); // Variable mit zugriff auf den Titel des Dialog
 let currentImage = 0;
+let slideshowTimer = null;  // Saves the timer for the slideshow
 
+const dogPicture = document.getElementById("content-dogGallery"); // Variable with access to the main page's content
+const dialogDogPicture = document.getElementById("dialogPicture"); // Variable with access to the main content of the dialog
+const dialogTitle = document.getElementById("pictureTitle"); // Variable with access to the dialog title
+const counter = document.getElementById("imageCounter");
 const dogGallery = [
     "Abby_Baden_ist_das_größte.jpeg",
     "Abby_Das_riecht_aber_gut.jpeg",
@@ -16,27 +18,26 @@ const dogGallery = [
     "Sunny_Eis_ist_das_beste.jpeg",
     "Sunny_My_best_buddy_und_Ich_in_Errinnerung.jpeg",
     "Sunny_OH_es_gibt_was_neues.jpeg",
-]; // Liste mit den Pfaden zu den Bildern
-const dialogRef = document.getElementById("dialogGallery"); // Variable mit zugriff auf den Dialog
+]; // List of paths to the images
+const dialogRef = document.getElementById("dialogGallery"); // Variable with access to the dialog
 
-// Funktion zumm generieren der bilder im main der Hauptseite mit id, class und onclick funktion im main bereich des dialog
+// Function to generate images in the main section of the main page, including an ID, class, and onclick function within the main area of ​​the dialog.
 function renderDogGallery() {
     for (let i = 0; i < dogGallery.length; i++) {
     dogPicture.innerHTML += `<button class="pictureDog" onclick="openDialog(${i})"><img id="dogGallery-Picture${i}" src="./assets/img/gallery/${dogGallery[i]}" alt="${dogGallery[i]}"></button`;
     }
 }
 
-// Dialog öffnen durch anklicken der bilder, Funktion zumm generieren der bilder im main des dialog sowie des titels
+// Open the dialog by clicking the images; includes a function to generate the images within the dialog's main section, as well as the title.
 function openDialog(i) {
     currentImage = i;
     dialogRef.showModal();
     renderDialogImage();
-    document.getElementById("imageCounter").innerHTML =
-    `${currentImage + 1} / ${dogGallery.length}`; // änder das <p> tag und gib die zahlwerte aus erste zahl wechselt zweite ist fest
+    counter.innerHTML =`${currentImage + 1} / ${dogGallery.length}`; // änder das <p> tag und gib die zahlwerte aus erste zahl wechselt zweite ist fest
 }
-
-//  Schließt den dialog
+//  Closes the dialog.
 function closeDialog() {
+    stopSlideshow(); // <-- Wichtig: Diashow stoppen beim Schließen
     dialogRef.close();
 }
 
@@ -46,7 +47,7 @@ function renderDialogImage() {
     .replaceAll("_", " ")
     .replaceAll(".jpeg", "");
 
-    dialogDogPicture.innerHTML = `<img src="./assets/img/gallery/${dogGallery[currentImage]}" alt="${dogGallery[currentImage]}">`;
+    dialogDogPicture.innerHTML = `<img id="dogGalleryPicture${dogGallery[currentImage]}" src="./assets/img/gallery/${dogGallery[currentImage]}" alt="${dogGallery[currentImage]}">`;
 }
 
 //  Change Picture with opened Dialog
@@ -54,17 +55,36 @@ function changePicture(step) {
     currentImage += step;
 
     if (currentImage >= dogGallery.length) {
-    // Prüfe ob die Tasten eingabe größer ist als die Liste wenn wahr da gehe zum start der liste
+    // Check if the key input is greater than the list; if true, go to the start of the list.
     currentImage = 0;
     }
 
     if (currentImage < 0) {
-    // Prüfe ob die Tasten eingabe kleiner ist als die Liste wenn wahr da gehe zum Ende der liste
+    // Check if the key input is less than the list; if true, go to the end of the list.
     currentImage = dogGallery.length - 1;
     }
 
-    document.getElementById("imageCounter").innerHTML =
-    `${currentImage + 1} / ${dogGallery.length}`; // änder das <p> tag und gib die zahlwerte aus erste zahl wechselt zweite ist fest
+    counter.innerHTML = `${currentImage + 1} / ${dogGallery.length}`; // Modify the <p> tag and output the numeric values; the first number changes, while the second remains fixed.
 
     renderDialogImage();
 }
+
+// Startet die automatische Diashow (Wechsel alle 3 Sekunden)
+function startSlideshow() {
+    // Verhindert doppelte Timer, falls man mehrfach klickt
+    if (slideshowTimer === null) {
+        slideshowTimer = setInterval(() => {
+            changePicture(1); // Nutzt Ihre vorhandene Funktion für das nächste Bild
+        }, 2000); // 2000 Millisekunden = 2 Sekunden
+    }
+}
+
+// Stoppt die Diashow
+function stopSlideshow() {
+    if (slideshowTimer !== null) {
+        clearInterval(slideshowTimer);
+        slideshowTimer = null;
+    }
+}
+
+

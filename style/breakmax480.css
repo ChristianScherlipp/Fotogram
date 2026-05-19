@@ -2,7 +2,7 @@
 @media screen and (min-width: 0px) and (max-width: 499px) {
      
 html {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .gl-header {
@@ -11,10 +11,6 @@ html {
 
 h1 {
     font-size: 2.5rem;
-}
-
-.dialogMainContent > img{
-    width: 18.25rem;
 }
 
 
